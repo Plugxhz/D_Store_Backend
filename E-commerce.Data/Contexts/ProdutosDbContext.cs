@@ -1,4 +1,4 @@
-﻿using Dunder_Store.E_commerce.Business.Entities;
+using Dunder_Store.E_commerce.Business.Entities;
 using Dunder_Store.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,13 +6,13 @@ namespace Dunder_Store.Database
 {
     public partial class ProdutosDbContext : DbContext
     {
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Pedido> Pedidos { get; set; }
-        public DbSet<PedidoProduto> PedidoProdutos { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Cupom> Cupons { get; set; }
-        public DbSet<PrecoRegiao> PrecoRegiao { get; set; }
+        public DbSet<Cliente> Clientes { get; set; } = null!;
+        public DbSet<Produto> Produtos { get; set; } = null!;
+        public DbSet<Pedido> Pedidos { get; set; } = null!;
+        public DbSet<PedidoProduto> PedidoProdutos { get; set; } = null!;
+        public DbSet<Categoria> Categorias { get; set; } = null!;
+        public DbSet<Cupom> Cupons { get; set; } = null!;
+        public DbSet<PrecoRegiao> PrecoRegiao { get; set; } = null!;
 
         public ProdutosDbContext(DbContextOptions<ProdutosDbContext> options)
             : base(options) { }
